@@ -1,0 +1,17 @@
+{
+  "name": "stroy-addons",
+  "version": "0.0.1",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:tsc": "lerna exec --scope story-addon-modularity --parallel -- cross-env-shell node \\$LERNA_ROOT_PATH/scripts/watch-tsc.js"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "lerna": "^3.13.3",
+    "shelljs": "^0.8.3",
+    "typescript": "^3.5.3"
+  }
+}

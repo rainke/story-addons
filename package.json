@@ -6,7 +6,8 @@
     "packages/*"
   ],
   "scripts": {
-    "dev:tsc": "lerna exec --scope story-addon-modularity --parallel -- cross-env-shell node \\$LERNA_ROOT_PATH/scripts/watch-tsc.js"
+    "dev:tsc": "lerna exec --scope story-addon-modularity --parallel -- cross-env-shell node \\$LERNA_ROOT_PATH/scripts/watch-tsc.js",
+    "start:app":"lerna run storybook --scope story-app"
   },
   "devDependencies": {
     "cross-env": "^5.2.0",

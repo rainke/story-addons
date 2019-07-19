@@ -1,7 +1,7 @@
 import React, { PureComponent, Fragment } from 'react';
 import { STORY_CHANGED } from '@storybook/core-events';
 import { API } from '@storybook/api';
-import {CLICK} from '../const';
+import {CLICK} from '../util/const';
 
 interface PannelProps {
   api: API;

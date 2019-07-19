@@ -1,7 +1,7 @@
 import { addons, types } from '@storybook/addons';
 import * as React from 'react';
 import Pannel from './components/Pannel';
-import {PARAM_KEY, ADDON_ID, PANNEL_ID} from './const';
+import {PARAM_KEY, ADDON_ID, PANNEL_ID} from './util/const';
 
 addons.register(ADDON_ID, api => {
     addons.addPanel(PANNEL_ID, {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import addons from '@storybook/addons';
-import {CLICK} from '../const';
+import {CLICK} from '../util/const';
 
 interface Props {
   html: string;

@@ -1,0 +1,18 @@
+.story-dashboard .row {
+  position: relative;
+  padding: 25px 14px 0;
+  background-color: #f5f5f5;
+  margin: 15px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  &::before {
+    content: 'row';
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    padding: 3px 7px;
+  }
+}

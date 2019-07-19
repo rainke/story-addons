@@ -7,11 +7,15 @@
   ],
   "scripts": {
     "dev:tsc": "lerna exec --scope story-addon-modularity --parallel -- cross-env-shell node \\$LERNA_ROOT_PATH/scripts/watch-tsc.js",
-    "start:app":"lerna run storybook --scope story-app"
+    "dev:sass": "lerna exec --scope story-addon-modularity --parallel -- cross-env-shell node \\$LERNA_ROOT_PATH/scripts/watch-sass.js",
+    "dev": "yarn dev:tsc && yarn dev:sass",
+    "start:app": "lerna run storybook --scope story-app"
   },
   "devDependencies": {
+    "@types/node": "^12.6.8",
     "cross-env": "^5.2.0",
     "lerna": "^3.13.3",
+    "sass": "^1.22.7",
     "shelljs": "^0.8.3",
     "typescript": "^3.5.3"
   }

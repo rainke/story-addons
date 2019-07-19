@@ -1,10 +1,10 @@
 import { storiesOf } from '@storybook/html';
 import { addons, types } from '@storybook/addons';
 import {withModular, DASHBOARD_STORY_NAME, PARAM_KEY} from 'story-addon-modularity'
+import './bootstrap.css';
 
-storiesOf('Button', module)
+storiesOf('button', module)
   .addDecorator(withModular({f: 'f'}))
-//   .addDecorator(box)
   .add(DASHBOARD_STORY_NAME, () => '', {[PARAM_KEY]: {
     dashboard: true
   }})

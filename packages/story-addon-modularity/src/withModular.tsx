@@ -5,13 +5,8 @@ import BoxWrap from './components/BoxWrap';
 import Dashboard from './components/Dashboard';
 import { DASHBOARD_STORY_NAME, PARAM_KEY } from './util/const';
 
-export const box = (storyFn: Function) => {
-  const div = document.createElement('div');
-  const html = storyFn();
-  const htmlStr = typeof html === 'string' ? html : html.outerHTML;
-  render(<BoxWrap html={htmlStr} />, div);
-  return div;
-};
+const box = document.createElement('div');
+let isRendered = false;
 
 export const withModular = makeDecorator({
   name: 'withModular',
@@ -21,9 +16,11 @@ export const withModular = makeDecorator({
   wrapper: (getStory, context, { options, parameters }) => {
     const story = getStory(context);
     if (parameters && parameters.dashboard) {
-      const box = document.createElement('div');
+      if(isRendered) return box;
       const htmlStr = typeof story === 'string' ? story : story.outerHTML;
-      render(<Dashboard html={htmlStr} />, box);
+      render(<Dashboard html={htmlStr} />, box, () => {
+        isRendered = true;
+      });
       return box;
     } else {
       return story;
